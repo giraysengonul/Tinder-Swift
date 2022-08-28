@@ -7,9 +7,9 @@
 
 import UIKit
 class HomeController: UIViewController {
-     // MARK: - Properties
-    
-     // MARK: - Lifecycle
+    // MARK: - Properties
+    private let topStack = HomeNavigationStackView()
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -17,12 +17,21 @@ class HomeController: UIViewController {
     }
     
 }
- // MARK: - Helpers
+// MARK: - Helpers
 extension HomeController{
     private func style(){
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
+        //topStack Style
+        topStack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(topStack)
+        
     }
     private func layout(){
-        
+        //topStack Layout
+        NSLayoutConstraint.activate([
+            topStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            topStack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: topStack.trailingAnchor)
+        ])
     }
 }
