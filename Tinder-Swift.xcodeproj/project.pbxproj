@@ -12,6 +12,7 @@
 		C422633128BA193A00AD9438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C422632F28BA193A00AD9438 /* LaunchScreen.storyboard */; };
 		C422634228BA1A4C00AD9438 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422634128BA1A4C00AD9438 /* HomeController.swift */; };
 		C470B84C28BB732600FC6B06 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470B84B28BB732600FC6B06 /* HomeNavigationStackView.swift */; };
+		C492E6F428BE9F0C00BFB049 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492E6F328BE9F0C00BFB049 /* BottomControlsStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C422633228BA193A00AD9438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C422634128BA1A4C00AD9438 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C470B84B28BB732600FC6B06 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
+		C492E6F328BE9F0C00BFB049 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C470B84B28BB732600FC6B06 /* HomeNavigationStackView.swift */,
+				C492E6F328BE9F0C00BFB049 /* BottomControlsStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				C422632528BA193800AD9438 /* AppDelegate.swift in Sources */,
 				C470B84C28BB732600FC6B06 /* HomeNavigationStackView.swift in Sources */,
+				C492E6F428BE9F0C00BFB049 /* BottomControlsStackView.swift in Sources */,
 				C422634228BA1A4C00AD9438 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

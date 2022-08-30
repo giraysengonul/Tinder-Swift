@@ -25,6 +25,9 @@ class HomeNavigationStackView: UIStackView {
 // MARK: - Helpers
 extension HomeNavigationStackView{
     private func style(){
+        heightAnchor.constraint(equalToConstant: 80).isActive = true
+        //tinderIcon Style
+        tinderIcon.contentMode = .scaleAspectFit
         //stackView Style
         [settingsButton, UIView(), tinderIcon, UIView(), messageButton].forEach { view in
             addArrangedSubview(view)
