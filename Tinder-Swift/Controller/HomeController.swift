@@ -14,7 +14,8 @@ class HomeController: UIViewController {
     private let deckView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemPink
-        view.layer.cornerRadius = 5
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
         return view
     }()
     // MARK: - Lifecycle
@@ -22,6 +23,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+        configureCards()
     }
     
 }
@@ -48,5 +50,16 @@ extension HomeController{
             view.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
             view.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
         ])
+    }
+    private func configureCards(){
+        let card1 = CardView()
+        let card2 = CardView()
+        card1.translatesAutoresizingMaskIntoConstraints = false
+        deckView.addSubview(card1)
+        card1.leadingAnchor.constraint(equalTo: deckView.leadingAnchor).isActive = true
+        card1.trailingAnchor.constraint(equalTo: deckView.trailingAnchor).isActive = true
+        card1.bottomAnchor.constraint(equalTo: deckView.bottomAnchor).isActive = true
+        card1.topAnchor.constraint(equalTo: deckView.topAnchor).isActive = true
+        
     }
 }
