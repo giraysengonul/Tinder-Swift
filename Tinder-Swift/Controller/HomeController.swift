@@ -53,7 +53,6 @@ extension HomeController{
     }
     private func configureCards(){
         let card1 = CardView()
-        let card2 = CardView()
         card1.translatesAutoresizingMaskIntoConstraints = false
         deckView.addSubview(card1)
         card1.leadingAnchor.constraint(equalTo: deckView.leadingAnchor).isActive = true
