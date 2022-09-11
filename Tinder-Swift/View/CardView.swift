@@ -94,26 +94,35 @@ extension CardView{
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleChangePhoto))
         addGestureRecognizer(tap)
     }
+    func resetCardPosition(_ sender: UIPanGestureRecognizer) {
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+            self.transform = .identity
+        }, completion: nil)
+    }
+    func panCard(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: nil)
+        let degrees: CGFloat = translation.x / 20
+        let angle = degrees * .pi / 180
+        let ratationalTransform = CGAffineTransform(rotationAngle: angle)
+        self.transform = ratationalTransform.translatedBy(x: translation.x, y: translation.y)
+    }
 }
 // MARK: - Action, selector
 extension CardView{
     @objc func handlePanGesture(_ sender: UIPanGestureRecognizer){
-        let translation = sender.translation(in: nil)
         switch sender.state {
         case .began:
             print("a")
         case .changed:
-            let degrees: CGFloat = translation.x / 20
-            let angle = degrees * .pi / 180
-            let ratationalTransform = CGAffineTransform(rotationAngle: angle)
-            self.transform = ratationalTransform.translatedBy(x: translation.x, y: translation.y)
+            panCard(sender)
         case .ended:
-            print("c")
+            resetCardPosition(sender)
         default: break
         }
     }
     @objc func handleChangePhoto(_ sender: UITapGestureRecognizer){
         
     }
+    
 }
 
