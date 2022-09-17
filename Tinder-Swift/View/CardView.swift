@@ -6,6 +6,12 @@
 //
 
 import UIKit
+
+enum SwipeDirection: Int {
+    case left = -1
+    case right = 1
+}
+
 class CardView: UIView {
     // MARK: - Properties
     private let gradient = CAGradientLayer()
@@ -95,9 +101,23 @@ extension CardView{
         addGestureRecognizer(tap)
     }
     func resetCardPosition(_ sender: UIPanGestureRecognizer) {
+        let direction: SwipeDirection = sender.translation(in: nil).x > 100 ? .right : .left
+        let shouldDismissCard = abs(sender.translation(in: nil).x) > 100
+        
         UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-            self.transform = .identity
-        }, completion: nil)
+            if shouldDismissCard {
+                let xDirection = CGFloat(direction.rawValue) * 1000
+                let offScreenTransform = self.transform.translatedBy(x: xDirection, y: 0)
+                self.transform = offScreenTransform
+            }else{
+                self.transform = .identity
+            }
+        }) { _ in
+            if shouldDismissCard{
+                self.removeFromSuperview()
+                return
+            }
+        }
     }
     func panCard(_ sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: nil)
@@ -112,7 +132,7 @@ extension CardView{
     @objc func handlePanGesture(_ sender: UIPanGestureRecognizer){
         switch sender.state {
         case .began:
-            print("a")
+            superview?.subviews.forEach({ $0.layer.removeAllAnimations() })
         case .changed:
             panCard(sender)
         case .ended:
