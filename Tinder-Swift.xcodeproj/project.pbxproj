@@ -14,6 +14,8 @@
 		C43D548228C5071E00685ECA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D548128C5071E00685ECA /* CardView.swift */; };
 		C470B84C28BB732600FC6B06 /* HomeNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470B84B28BB732600FC6B06 /* HomeNavigationStackView.swift */; };
 		C492E6F428BE9F0C00BFB049 /* BottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492E6F328BE9F0C00BFB049 /* BottomControlsStackView.swift */; };
+		C49DD50628D5C50200385830 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49DD50528D5C50200385830 /* User.swift */; };
+		C4F96E2F28D9EC5700126E57 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F96E2E28D9EC5700126E57 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C43D548128C5071E00685ECA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C470B84B28BB732600FC6B06 /* HomeNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationStackView.swift; sourceTree = "<group>"; };
 		C492E6F328BE9F0C00BFB049 /* BottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsStackView.swift; sourceTree = "<group>"; };
+		C49DD50528D5C50200385830 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C4F96E2E28D9EC5700126E57 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		C422633D28BA19D800AD9438 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C4F96E2E28D9EC5700126E57 /* CardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 		C422633F28BA19E400AD9438 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C49DD50528D5C50200385830 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,9 +204,11 @@
 			files = (
 				C422632528BA193800AD9438 /* AppDelegate.swift in Sources */,
 				C470B84C28BB732600FC6B06 /* HomeNavigationStackView.swift in Sources */,
+				C49DD50628D5C50200385830 /* User.swift in Sources */,
 				C492E6F428BE9F0C00BFB049 /* BottomControlsStackView.swift in Sources */,
 				C422634228BA1A4C00AD9438 /* HomeController.swift in Sources */,
 				C43D548228C5071E00685ECA /* CardView.swift in Sources */,
+				C4F96E2F28D9EC5700126E57 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

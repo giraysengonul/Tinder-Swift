@@ -52,7 +52,9 @@ extension HomeController{
         ])
     }
     private func configureCards(){
-        let card1 = CardView()
+        let user1 = User(name: "Hakkı", age: 25, images: [#imageLiteral(resourceName: "kelly1"), #imageLiteral(resourceName: "lady4c"), #imageLiteral(resourceName: "lady5c")])
+        let user2 = User(name: "Can", age: 25, images: [#imageLiteral(resourceName: "kelly1"), #imageLiteral(resourceName: "kelly2"), #imageLiteral(resourceName: "jane2")])
+        let card1 = CardView(viewModel: CardViewModel(user: user1))
         card1.translatesAutoresizingMaskIntoConstraints = false
         deckView.addSubview(card1)
         card1.leadingAnchor.constraint(equalTo: deckView.leadingAnchor).isActive = true

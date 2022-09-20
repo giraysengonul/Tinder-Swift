@@ -15,11 +15,10 @@ enum SwipeDirection: Int {
 class CardView: UIView {
     // MARK: - Properties
     private let gradient = CAGradientLayer()
+    private let viewModel: CardViewModel
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        let image = #imageLiteral(resourceName: "jane1")
         imageView.contentMode = .scaleAspectFill
-        imageView.image = image
         return imageView
     }()
     private let infoLabel: UILabel = {
@@ -37,8 +36,9 @@ class CardView: UIView {
         return button
     }()
     // MARK: - Lifecycle
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(viewModel : CardViewModel) {
+        self.viewModel = viewModel
+        super.init(frame: .zero)
         style()
         layout()
         configureGestureRecognizers()
@@ -55,6 +55,7 @@ extension CardView{
     private func style(){
         backgroundColor = .systemPurple
         //imageView Style
+        imageView.image = viewModel.user.images.first
         imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
         //gradientLayer Added
