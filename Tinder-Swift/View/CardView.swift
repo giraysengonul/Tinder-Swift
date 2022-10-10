@@ -21,12 +21,10 @@ class CardView: UIView {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    private let infoLabel: UILabel = {
+    private lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        let attributedText = NSMutableAttributedString(string: "Jane Doe", attributes: [.foregroundColor : UIColor.white , .font : UIFont.systemFont(ofSize: 32, weight: .heavy)])
-        attributedText.append(NSAttributedString(string: "  20", attributes: [.foregroundColor : UIColor.white, .font : UIFont.systemFont(ofSize: 24)]))
-        label.attributedText = attributedText
+        label.attributedText = viewModel.userInfoText
         return label
     }()
     private lazy var infoButton: UIButton = {
@@ -142,7 +140,11 @@ extension CardView{
         }
     }
     @objc func handleChangePhoto(_ sender: UITapGestureRecognizer){
-        
+        let location = sender.location(in: nil).x
+        let shouldShowNextPhoto = location > self.frame.width / 2
+        if shouldShowNextPhoto{ viewModel.showNextPhoto() }
+        else{ viewModel.showPreviousPhoto() }
+        imageView.image = viewModel.imageToShow
     }
     
 }
