@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C412130E28F43C010046ECD7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412130D28F43C010046ECD7 /* LoginController.swift */; };
+		C412131028F43C580046ECD7 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412130F28F43C580046ECD7 /* RegistrationController.swift */; };
+		C412131228F45C100046ECD7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412131128F45C0F0046ECD7 /* CustomTextField.swift */; };
+		C412131428F45EC20046ECD7 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412131328F45EC20046ECD7 /* AuthButton.swift */; };
 		C422632528BA193800AD9438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422632428BA193800AD9438 /* AppDelegate.swift */; };
 		C422632E28BA193A00AD9438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C422632D28BA193A00AD9438 /* Assets.xcassets */; };
 		C422633128BA193A00AD9438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C422632F28BA193A00AD9438 /* LaunchScreen.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C412130D28F43C010046ECD7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C412130F28F43C580046ECD7 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		C412131128F45C0F0046ECD7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C412131328F45EC20046ECD7 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		C422632128BA193800AD9438 /* Tinder-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C422632428BA193800AD9438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C422632D28BA193A00AD9438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C412130C28F43BED0046ECD7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				C412130D28F43C010046ECD7 /* LoginController.swift */,
+				C412130F28F43C580046ECD7 /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		C422631828BA193800AD9438 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +93,8 @@
 		C422633828BA194900AD9438 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C412131128F45C0F0046ECD7 /* CustomTextField.swift */,
+				C412131328F45EC20046ECD7 /* AuthButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -90,6 +109,7 @@
 		C422633A28BA196100AD9438 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C412130C28F43BED0046ECD7 /* Authentication */,
 				C422634128BA1A4C00AD9438 /* HomeController.swift */,
 			);
 			path = Controller;
@@ -203,10 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C422632528BA193800AD9438 /* AppDelegate.swift in Sources */,
+				C412131028F43C580046ECD7 /* RegistrationController.swift in Sources */,
 				C470B84C28BB732600FC6B06 /* HomeNavigationStackView.swift in Sources */,
 				C49DD50628D5C50200385830 /* User.swift in Sources */,
+				C412131228F45C100046ECD7 /* CustomTextField.swift in Sources */,
 				C492E6F428BE9F0C00BFB049 /* BottomControlsStackView.swift in Sources */,
+				C412131428F45EC20046ECD7 /* AuthButton.swift in Sources */,
 				C422634228BA1A4C00AD9438 /* HomeController.swift in Sources */,
+				C412130E28F43C010046ECD7 /* LoginController.swift in Sources */,
 				C43D548228C5071E00685ECA /* CardView.swift in Sources */,
 				C4F96E2F28D9EC5700126E57 /* CardViewModel.swift in Sources */,
 			);
